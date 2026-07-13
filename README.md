@@ -10,4 +10,4 @@ Para complementar o monitoramento da infraestrutura, implementei uma API REST de
 
 Na camada de distribuição e rede, integrei a API ao ecossistema do Proxy Reverso do Nginx dentro do bloco de servidor seguro (HTTPS) do subdomínio principal (mc.lucascruz.shop). Essa configuração mapeia cirurgicamente o endpoint `/api/status` e encaminha o tráfego interno para a porta nativa 8080 gerenciada pelo servidor Tomcat embutido. Visando garantir a resiliência e a alta disponibilidade do microsserviço, a aplicação foi encapsulada como um daemon nativo do Linux via systemd, contando com políticas de autorrecuperação automática (always restart) em cenários de crash e persistência ativa em segundo plano, tornando o microsserviço totalmente independente de sessões ativas de terminal SSH.
 
-Link: https://crafty.lucascruz.shop/
+Link: https://crafty.lucascruz.shop/ & https://mc.lucascruz.shop/api/status
